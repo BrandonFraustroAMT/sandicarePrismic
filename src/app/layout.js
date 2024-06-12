@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { createClient } from "@/prismicio";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Home from "@/components/Home";
