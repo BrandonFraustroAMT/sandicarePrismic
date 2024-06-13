@@ -261,12 +261,9 @@
   }
 
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 2500px) {
     .IznHP {
         background: #EFECDF;
-    }
-    .hKULn {
-        margin-top: 136vh;
     }
     .grid-container {
       display: grid;
@@ -381,15 +378,4 @@
 }
 
 
-@media screen and (min-width: 1441px) {
-    .grid-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 65%;
-    }
-    .dGbIGI {
-        width: 100%;
-    }
-}
+
