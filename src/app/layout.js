@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Home from "@/components/Home";
@@ -22,6 +23,19 @@ export default function RootLayout({ header, navbar }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <title>Sandicare</title>
+        <Script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16565622841"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16565622841');
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <div className="container-background">
