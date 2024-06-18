@@ -1,11 +1,13 @@
+
 import { createClient } from "@/prismicio";
 import './ButtonStyle.css'
 import './Navbar.css'
+import ButtonWithTracking from "./Button";
 
 export default async function Navbar() {
     const client = createClient();
     const navbar = await client.getSingle("navbar");
-    
+
     return(
 
         <div className="breakpointUtils__DesktopTabletOnly-sc-90pxmk-3 navbar">
@@ -20,20 +22,11 @@ export default async function Navbar() {
 
             {/* Boton */}
             {
-                navbar.data.boton_link && 
-                (
-                    <div className="button-container">
-                        <a href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17" className="wrapper-link">
-                            <div className="button-wrapper">
-                                <div className="button-wrapper__div">
-                                    <span className="button-wrapper__span">
-                                        {navbar.data.botontext}
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                )
+                navbar.data.boton_link && (
+                    <ButtonWithTracking 
+                        href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17"
+                        text={navbar.data.botontext}
+                    />)
             }
           </div>
         </header>

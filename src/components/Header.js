@@ -2,6 +2,7 @@
 import { createClient } from "@/prismicio";
 import { useState, useEffect } from "react";
 import './Header.css';
+import ButtonWithTracking from "./Button";
 
 // Función para obtener los datos de manera asíncrona
 const fetchHeaderData = async () => {
@@ -112,18 +113,10 @@ export default function Header() {
                     
                     <div id='buttonCheck' className="pin-spacer">
                     {
-                      navbar == null ? '' : (
-                            <div className="button-container">
-                                <a href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17" className="wrapper-link">
-                                    <div className="button-wrapper">
-                                        <div className="button-wrapper__div">
-                                            <span className="button-wrapper__span">
-                                                {navbar.data.botontext}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                      navbar == null ? '' : ( <ButtonWithTracking 
+                            href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17"
+                            text={navbar.data.botontext}
+                          />
                         )
                     }
                     </div>

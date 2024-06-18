@@ -1,6 +1,7 @@
 import { createClient } from "@/prismicio";
 import "./WhitePage.css";
 import "./ButtonStyle.css";
+import ButtonWithTracking from "./Button";
 
 export default async function WhitePage() {
     const client = createClient();
@@ -229,17 +230,10 @@ export default async function WhitePage() {
                                 {
                                     navbar.data.boton_link && 
                                     (
-                                        <div className="button-container">
-                                            <a href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17" className="wrapper-link">
-                                                <div className="button-wrapper">
-                                                    <div className="button-wrapper__div">
-                                                        <span className="button-wrapper__span">
-                                                            {bodycontent.data.group_five.map(bc => bc.botontexto)}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <ButtonWithTracking 
+                                            href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17"
+                                            text={bodycontent.data.group_five.map(bc => bc.botontexto)}
+                                        />
                                     )
                                 }
                             </div>

@@ -1,6 +1,7 @@
 import { createClient } from "@/prismicio";
 import "./Footer.css";
 import "./ButtonStyle.css";
+import ButtonWithTracking from "./Button";
 
 export default async function Footer() {
     const client = createClient();
@@ -32,17 +33,10 @@ export default async function Footer() {
                 {
                     navbar.data.boton_link && 
                     (
-                        <div className="button-container">
-                            <a href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17" className="wrapper-link">
-                                <div className="button-wrapper">
-                                    <div className="button-wrapper__div">
-                                        <span className="button-wrapper__span">
-                                            {navbar.data.botontext}
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                      <ButtonWithTracking 
+                        href="https://calendly.com/dircom-digimedical/30min?preview_source=et_card&month=2024-06&date=2024-06-17"
+                        text={navbar.data.botontext}
+                      />
                     )
                 }
               </a>
