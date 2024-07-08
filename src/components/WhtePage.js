@@ -133,7 +133,8 @@ export default async function WhitePage() {
                                 </div>
                             </div>
                         </section>
-                        <section className="sc-07-Quotes__Wrapper-sc-14dpdqo-0 dJZHZN">
+                        {/* TESTIMONIOS */}
+                        {/* <section className="sc-07-Quotes__Wrapper-sc-14dpdqo-0 dJZHZN">
                             <div className="sc-07-Quotes__Inner-sc-14dpdqo-1 gbqfKY">
                                 <div className="AutoAnimate__Wrapper-sc-15fuycz-0 krnjpk sc-07-Quotes__StyledAutoAnimate-sc-14dpdqo-4 TFsiD" alignment="center" style={{display: "grid", height: "auto", width: "auto"}}>
                                     <div style={{translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0px)", opacity: "1"}}>
@@ -172,7 +173,7 @@ export default async function WhitePage() {
                                     </svg>
                                 </button>
                             </div>
-                        </section>
+                        </section> */}
                         <section className="sc-08-Integrations__Wrapper-sc-18of6v0-0 eToItN">
                             <div className="sc-08-Integrations__Inner-sc-18of6v0-1 hXLvBB">
                                 <div className="Pill__Wrapper-sc-1tqyxfy-0 gtAMbc">
